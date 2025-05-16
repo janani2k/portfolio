@@ -32,8 +32,6 @@
 </div>
 <!-- Theme Toggle Button -->
 <button id="theme-toggle" class="btn btn-sm btn-outline-dark">🌙</button>
-
-
 <script>
   AOS.init();
 </script>
@@ -76,10 +74,11 @@
   });
 </script>
 <script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    // Change emoji too
+    themeToggle.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
   });
 </script>
 
